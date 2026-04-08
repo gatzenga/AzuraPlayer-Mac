@@ -5,20 +5,9 @@
 //  Created by Vasco Kugler on 07.04.2026.
 //
 
+// Nicht verwendet – Einstiegspunkt ist AzuraPlayer_MacApp via MenuBarExtra.
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
-    }
-}
-
-#Preview {
-    ContentView()
+    var body: some View { EmptyView() }
 }
