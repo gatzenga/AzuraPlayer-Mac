@@ -55,6 +55,7 @@ class StatusBarController: NSObject, NSMenuDelegate {
     }
 
     private func buildMenu() -> NSMenu {
+        let lang = UserDefaults.standard.string(forKey: "appLanguage") ?? "en"
         let menu = NSMenu()
 
         let playItem = PlayMenuItem()
@@ -63,7 +64,7 @@ class StatusBarController: NSObject, NSMenuDelegate {
 
         menu.addItem(NSMenuItem.separator())
 
-        menu.addItem(NSMenuItem(title: "Sender", action: nil, keyEquivalent: ""))
+        menu.addItem(NSMenuItem(title: tr("Stations", "Sender", lang), action: nil, keyEquivalent: ""))
 
         for station in StationStore.shared.stations {
             let item = NSMenuItem(
@@ -78,18 +79,23 @@ class StatusBarController: NSObject, NSMenuDelegate {
 
         menu.addItem(NSMenuItem.separator())
 
-        let aboutItem = NSMenuItem(title: "Über AzuraPlayer", action: #selector(showAbout), keyEquivalent: "")
-        aboutItem.target = self
-        aboutItem.image = NSImage(systemSymbolName: "info.circle", accessibilityDescription: nil)
-        menu.addItem(aboutItem)
+        let historyItem = NSMenuItem(title: tr("History", "Verlauf", lang), action: #selector(showHistory), keyEquivalent: "")
+        historyItem.target = self
+        historyItem.image = NSImage(systemSymbolName: "clock.arrow.circlepath", accessibilityDescription: nil)
+        menu.addItem(historyItem)
 
-        let settingsItem = NSMenuItem(title: "Einstellungen…", action: #selector(showSettings), keyEquivalent: ",")
+        let settingsItem = NSMenuItem(title: tr("Settings", "Einstellungen", lang), action: #selector(showSettings), keyEquivalent: ",")
         settingsItem.target = self
         settingsItem.image = NSImage(systemSymbolName: "gearshape", accessibilityDescription: nil)
         menu.addItem(settingsItem)
 
+        let aboutItem = NSMenuItem(title: tr("About AzuraPlayer", "Über AzuraPlayer", lang), action: #selector(showAbout), keyEquivalent: "")
+        aboutItem.target = self
+        aboutItem.image = NSImage(systemSymbolName: "info.circle", accessibilityDescription: nil)
+        menu.addItem(aboutItem)
+
         menu.addItem(NSMenuItem(
-            title: "Beenden",
+            title: tr("Quit", "Beenden", lang),
             action: #selector(NSApplication.terminate(_:)),
             keyEquivalent: "q"
         ))
@@ -136,6 +142,10 @@ class StatusBarController: NSObject, NSMenuDelegate {
         NSApplication.shared.orderFrontStandardAboutPanel(options: [
             .credits: credits
         ])
+    }
+
+    @objc func showHistory() {
+        HistoryWindowController.show()
     }
 
     @objc func showSettings() {

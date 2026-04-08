@@ -19,7 +19,6 @@ struct SettingsView: View {
                           systemImage: "gearshape")
                 }
         }
-        .frame(width: 480, height: 360)
     }
 }
 

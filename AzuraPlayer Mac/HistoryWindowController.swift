@@ -1,5 +1,5 @@
 //
-//  SettingsWindowController.swift
+//  HistoryWindowController.swift
 //  AzuraPlayer Mac
 //
 
@@ -7,29 +7,26 @@ import AppKit
 import SwiftUI
 
 @MainActor
-class SettingsWindowController: NSWindowController {
-    private static var instance: SettingsWindowController?
+class HistoryWindowController: NSWindowController {
+    private static var instance: HistoryWindowController?
 
     static func show() {
         if instance == nil {
             let win = NSWindow(
-                contentRect: NSRect(x: 0, y: 0, width: 720, height: 460),
+                contentRect: NSRect(x: 0, y: 0, width: 860, height: 580),
                 styleMask: [.titled, .closable, .miniaturizable],
                 backing: .buffered,
                 defer: false
             )
             let lang = UserDefaults.standard.string(forKey: "appLanguage") ?? "en"
-            win.title = tr("Settings", "Einstellungen", lang)
+            win.title = tr("History", "Verlauf", lang)
             win.isReleasedWhenClosed = false
 
-            // NSHostingView statt NSHostingController — kein automatisches Resizing
-            let hostingView = NSHostingView(
-                rootView: SettingsView().environmentObject(StationStore.shared)
-            )
+            let hostingView = NSHostingView(rootView: HistoryView())
             win.contentView = hostingView
             win.center()
 
-            instance = SettingsWindowController(window: win)
+            instance = HistoryWindowController(window: win)
 
             NotificationCenter.default.addObserver(
                 forName: NSWindow.willCloseNotification,
@@ -37,7 +34,7 @@ class SettingsWindowController: NSWindowController {
                 queue: .main
             ) { _ in
                 Task { @MainActor in
-                    SettingsWindowController.instance = nil
+                    HistoryWindowController.instance = nil
                 }
             }
         }

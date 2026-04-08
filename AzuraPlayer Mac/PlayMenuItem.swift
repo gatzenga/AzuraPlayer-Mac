@@ -229,7 +229,8 @@ fileprivate class PlayItemView: NSView {
     private func showEmptyState() {
         songLabel.font = NSFont.systemFont(ofSize: 13)
         songLabel.textColor = .secondaryLabelColor
-        songLabel.stringValue = "Kein Sender aktiv"
+        let lang = UserDefaults.standard.string(forKey: "appLanguage") ?? "en"
+        songLabel.stringValue = tr("No station active", "Kein Sender aktiv", lang)
         stationLabel.isHidden = true
         statusIcon.image = nil
         updateLabelConstraints(centered: true)

@@ -71,6 +71,11 @@ class MetadataService: ObservableObject {
             if let newSong = response.nowPlaying?.song {
                 if currentTrack?.title != newSong.title || currentTrack?.artist != newSong.artist {
                     currentTrack = newSong
+                    PlaybackHistoryStore.shared.addEntry(
+                        song: newSong,
+                        stationName: response.station.name,
+                        artworkURL: newSong.art ?? stationArtURL
+                    )
                 }
             }
 
