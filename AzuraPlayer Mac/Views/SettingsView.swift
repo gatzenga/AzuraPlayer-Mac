@@ -288,6 +288,7 @@ private struct GeneralTab: View {
                     .pickerStyle(.radioGroup)
                     .labelsHidden()
                 }
+
             }
             .padding(20)
             .frame(maxWidth: .infinity, alignment: .leading)

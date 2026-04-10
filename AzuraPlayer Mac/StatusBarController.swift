@@ -24,7 +24,6 @@ class StatusBarController: NSObject, NSMenuDelegate {
         menuItem.button?.action = #selector(showMenu)
         menuItem.button?.imagePosition = .imageRight
 
-        // Combine subscriptions — bridge from @Published to AppKit
         AudioPlayerService.shared.$isPlaying
             .receive(on: DispatchQueue.main)
             .sink { [weak self] _ in self?.playerStatusChanged() }
@@ -40,7 +39,6 @@ class StatusBarController: NSObject, NSMenuDelegate {
             .sink { [weak self] _ in self?.updateItemText() }
             .store(in: &cancellables)
 
-        // Einstellung "Songtitel anzeigen" beobachten
         NotificationCenter.default.publisher(for: UserDefaults.didChangeNotification)
             .receive(on: DispatchQueue.main)
             .sink { [weak self] _ in self?.updateItemText() }
@@ -123,18 +121,25 @@ class StatusBarController: NSObject, NSMenuDelegate {
             .foregroundColor: NSColor.secondaryLabelColor
         ]
 
+        let github = NSMutableAttributedString(string: "GitHub", attributes: linkStyle)
+        github.addAttribute(.link,
+            value: URL(string: "https://github.com/GatzeStreicheln/AzuraPlayer-Mac")!,
+            range: NSRange(location: 0, length: github.length))
+
+        let separator = NSAttributedString(string: "   ·   ", attributes: labelStyle)
+
         let privacy = NSMutableAttributedString(string: "Datenschutz", attributes: linkStyle)
         privacy.addAttribute(.link,
             value: URL(string: "https://gatzestreicheln.github.io/AzuraPlayer/privacy.html")!,
             range: NSRange(location: 0, length: privacy.length))
 
-        let separator = NSAttributedString(string: "   ·   ", attributes: labelStyle)
-
         let contact = NSMutableAttributedString(string: "Kontakt", attributes: linkStyle)
         contact.addAttribute(.link,
-            value: URL(string: "mailto:vasco@vkugler.ch")!,
+            value: URL(string: "mailto:kontakt@vkugler.ch")!,
             range: NSRange(location: 0, length: contact.length))
 
+        credits.append(github)
+        credits.append(separator)
         credits.append(privacy)
         credits.append(separator)
         credits.append(contact)
