@@ -1,5 +1,5 @@
 <p align="left">
-  <img src="AzuraPlayer Mac/Assets.xcassets/AppIcon.appiconset/dark Kopie - 3.png"100" alt="App Logo"/>
+  <img src="icon.png" width="150" alt="App Logo"/>
 </p>
 
 AzuraPlayer lets you stream your self-hosted AzuraCast stations – or any other radio stream – right from your Mac.

@@ -72,7 +72,7 @@ struct AddEditStationView: View {
                                     .padding(.vertical, 4)
                                     .background(Color.secondary.opacity(0.1))
                                     .clipShape(RoundedRectangle(cornerRadius: 5))
-                                TextField("ihre-domain.com (HLS empfohlen)", text: urlPathBinding)
+                                TextField(tr("(HLS recommended)", "(HLS empfohlen)", lang), text: urlPathBinding)
                                     .textFieldStyle(.roundedBorder)
                                     .onChange(of: streamURL) { _, new in
                                         if autoFillAPI { deriveAPIURL(from: new) }
