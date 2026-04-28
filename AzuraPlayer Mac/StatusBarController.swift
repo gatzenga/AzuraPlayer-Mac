@@ -121,6 +121,11 @@ class StatusBarController: NSObject, NSMenuDelegate {
             .foregroundColor: NSColor.secondaryLabelColor
         ]
 
+        let website = NSMutableAttributedString(string: "Website", attributes: linkStyle)
+        website.addAttribute(.link,
+            value: URL(string: "https://vkugler.app")!,
+            range: NSRange(location: 0, length: website.length))
+
         let github = NSMutableAttributedString(string: "GitHub", attributes: linkStyle)
         github.addAttribute(.link,
             value: URL(string: "https://github.com/gatzenga/AzuraPlayer-Mac")!,
@@ -138,6 +143,8 @@ class StatusBarController: NSObject, NSMenuDelegate {
             value: URL(string: "mailto:kontakt@vkugler.ch")!,
             range: NSRange(location: 0, length: contact.length))
 
+        credits.append(website)
+        credits.append(separator)
         credits.append(github)
         credits.append(separator)
         credits.append(privacy)
