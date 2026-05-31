@@ -4,6 +4,10 @@
 
 AzuraPlayer lets you stream your self-hosted AzuraCast stations – or any other radio stream – right from your Mac.
 
+[![TestFlight](https://img.shields.io/badge/TestFlight-0D96F6?style=for-the-badge&logo=apple&logoColor=white)](https://testflight.apple.com/join/ugGTP1ka)
+
+[![Website](https://img.shields.io/badge/Website-000000?style=for-the-badge&logo=safari&logoColor=white)](https://vkugler.app)
+
 **Features:**
 
 - Add multiple AzuraCast stations
@@ -16,12 +20,6 @@ AzuraPlayer lets you stream your self-hosted AzuraCast stations – or any other
 - Export and import of stations via JSON
 
 AzuraPlayer is an unofficial app and is not affiliated with or endorsed by the AzuraCast developers.
-
-This is my first Mac app. I work in IT, but not as a software developer, so I used Claude (AI) as a support tool throughout the development process. I want to be transparent about that.
-
-**Website:** https://vkugler.app
-
-https://testflight.apple.com/join/ugGTP1ka
 
 <table>
   <tr>

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		BCFF3E352F85A6FB001D0910 /* AzuraPlayer Desktop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AzuraPlayer Desktop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCFF3E352F85A6FB001D0910 /* AzuraPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AzuraPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -40,7 +40,7 @@
 		BCFF3E362F85A6FB001D0910 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BCFF3E352F85A6FB001D0910 /* AzuraPlayer Desktop.app */,
+				BCFF3E352F85A6FB001D0910 /* AzuraPlayer.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,9 +48,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BCFF3E342F85A6FB001D0910 /* AzuraPlayer Desktop */ = {
+		BCFF3E342F85A6FB001D0910 /* AzuraPlayer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BCFF3E402F85A6FC001D0910 /* Build configuration list for PBXNativeTarget "AzuraPlayer Desktop" */;
+			buildConfigurationList = BCFF3E402F85A6FC001D0910 /* Build configuration list for PBXNativeTarget "AzuraPlayer" */;
 			buildPhases = (
 				BCFF3E312F85A6FB001D0910 /* Sources */,
 				BCFF3E322F85A6FB001D0910 /* Frameworks */,
@@ -63,11 +63,11 @@
 			fileSystemSynchronizedGroups = (
 				BCFF3E372F85A6FB001D0910 /* AzuraPlayer Mac */,
 			);
-			name = "AzuraPlayer Desktop";
+			name = AzuraPlayer;
 			packageProductDependencies = (
 			);
 			productName = "AzuraPlayer Mac";
-			productReference = BCFF3E352F85A6FB001D0910 /* AzuraPlayer Desktop.app */;
+			productReference = BCFF3E352F85A6FB001D0910 /* AzuraPlayer.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -99,7 +99,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BCFF3E342F85A6FB001D0910 /* AzuraPlayer Desktop */,
+				BCFF3E342F85A6FB001D0910 /* AzuraPlayer */,
 			);
 		};
 /* End PBXProject section */
@@ -260,7 +260,7 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "AzuraPlayer Desktop";
+				INFOPLIST_KEY_CFBundleDisplayName = AzuraPlayer;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
 				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -270,7 +270,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 15.6;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ch.azuraplayer.vkugler.mac;
+				PRODUCT_BUNDLE_IDENTIFIER = ch.azuraplayer.vkugler;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -297,7 +297,7 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "AzuraPlayer Desktop";
+				INFOPLIST_KEY_CFBundleDisplayName = AzuraPlayer;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
 				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -307,7 +307,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 15.6;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ch.azuraplayer.vkugler.mac;
+				PRODUCT_BUNDLE_IDENTIFIER = ch.azuraplayer.vkugler;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -331,7 +331,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BCFF3E402F85A6FC001D0910 /* Build configuration list for PBXNativeTarget "AzuraPlayer Desktop" */ = {
+		BCFF3E402F85A6FC001D0910 /* Build configuration list for PBXNativeTarget "AzuraPlayer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BCFF3E412F85A6FC001D0910 /* Debug */,
