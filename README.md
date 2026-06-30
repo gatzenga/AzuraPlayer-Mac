@@ -1,30 +1,27 @@
+# Archived - not actively developed
+
 <p align="left">
   <img src="icon.png" width="150" alt="App Logo"/>
 </p>
 
-AzuraPlayer lets you stream your self-hosted AzuraCast stations – or any other radio stream – right from your Mac.
+# AzuraPlayer Mac
 
-[![TestFlight](https://img.shields.io/badge/TestFlight-0D96F6?style=for-the-badge&logo=apple&logoColor=white)](https://testflight.apple.com/join/ugGTP1ka)
+AzuraPlayer Mac is a native macOS app for playing self-hosted AzuraCast stations and other direct radio stream URLs from the Mac.
 
-[![Website](https://img.shields.io/badge/Website-000000?style=for-the-badge&logo=safari&logoColor=white)](https://vkugler.app)
+This app is no longer actively developed. The repository remains available as a code archive with the existing implementation.
 
-**Features:**
+## Features
 
-- Add multiple AzuraCast stations
-- Support for other radio stream links
-- Play live streams directly in the app
-- Display the currently playing song with title and artist
-- Show album artwork of the current song (only AzuraCast stations)
-- Option to set a custom station cover
-- Option to enable or disable song artwork display
-- Export and import of stations via JSON
+- Add and manage multiple AzuraCast stations
+- Play direct radio stream links
+- Show current track title and artist when metadata is available
+- Display current song artwork for supported AzuraCast stations
+- Set a custom station cover
+- Enable or disable song artwork display
+- Export and import stations as JSON
+
+## Status
+
+This repository is kept as-is. TestFlight, website, and screenshot references have been removed.
 
 AzuraPlayer is an unofficial app and is not affiliated with or endorsed by the AzuraCast developers.
-
-<table>
-  <tr>
-    <td><img src="screenshots/menubar.png" width="300"/></td>
-    <td><img src="screenshots/stations.png" width="300"/></td>
-    <td><img src="screenshots/history.png" width="300"/></td>
-  </tr>
-</table>
